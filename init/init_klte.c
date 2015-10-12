@@ -70,4 +70,5 @@ void gsm_properties()
     property_set("telephony.lteOnGsmDevice", "1");
     property_set("ro.telephony.default_network", "9");
     property_set("ro.telephony.ril.config", "newDialCode");
+    property_set("ro.ril.enable.dcm.feature", "1");
 }
