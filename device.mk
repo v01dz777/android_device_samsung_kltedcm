@@ -24,14 +24,12 @@ $(call inherit-product-if-exists, vendor/samsung/klte-felica-common/felica-commo
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+DEVICE_NFC_SONY=yes
+
 # Ramdisk for FeliCa
 PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.felica.sh
-
-# NFC
-PRODUCT_PACKAGES += \
-    nfc_nci.pn54x.default
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
