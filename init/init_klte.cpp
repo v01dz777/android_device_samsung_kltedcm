@@ -47,9 +47,6 @@ void gsm_properties()
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
     int rc;
 
     UNUSED(msm_id);
@@ -57,19 +54,12 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     UNUSED(board_type);
 
     rc = property_get("ro.board.platform", platform);
-//    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
-    if (!rc || !ISMATCH(platform, "msm8974"))
+    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
-
-    property_get("ro.bootloader", bootloader);
 
     property_set("ro.build.fingerprint", "samsung/SC-04F/SC-04F:5.0/LRX21T/SC04FOMU1WOI2:user/release-keys");
     property_set("ro.build.description", "kltedcm-user 5.0 LRX21T SC04FOMU1WOI2 release-keys");
     property_set("ro.product.model", "SC-04F");
     property_set("ro.product.device", "kltedcm");
     gsm_properties();
-
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
 }
