@@ -18,7 +18,6 @@
 TARGET_OTA_ASSERT_DEVICE := kltedcm,klte
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/kltedcm/mkbootimg.mk
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_dcm_defconfig
 
 # Init
