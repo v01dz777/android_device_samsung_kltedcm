@@ -47,5 +47,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/variant_blobs_hook.sh:install/bin/variant_blobs_hook.sh \
     device/samsung/klte-common/releasetools/variant_blobs.sh:install/bin/variant_blobs.sh
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    TunaDoze
+
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
