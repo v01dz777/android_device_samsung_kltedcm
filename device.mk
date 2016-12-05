@@ -16,19 +16,22 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# AOJP common
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/kltedcm/kltedcm-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# NFC
-# See https://github.com/CyanogenMod/android_external_libnfc-nci/blob/cm-14.1/halimpl/pn54x/Android.mk#L21
-# for magic values of NXP_CHIP_TYPE.
-NXP_CHIP_TYPE := 1
+DEVICE_NFC_SONY=yes
+
+# Ramdisk for FeliCa
 PRODUCT_PACKAGES += \
-    libpn547_fw \
-    nfc_nci.pn54x.default
+    init.carrier.rc \
+    init.felica.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
