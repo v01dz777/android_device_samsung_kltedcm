@@ -16,15 +16,12 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# AOJP common
-$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
 $(call inherit-product-if-exists, vendor/samsung/kltedcm/kltedcm-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/kltedcm/overlay
 
 DEVICE_NFC_SONY=yes
 
@@ -34,9 +31,9 @@ PRODUCT_PACKAGES += \
     init.felica.sh
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/samsung/kltedcm/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/samsung/kltedcm/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    device/samsung/kltedcm/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
