@@ -16,7 +16,7 @@
 # inherit from common klte
 -include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltexx,kltelra,kltetmo,kltecan,klteatt,klteub,klteacg,klte,kltevzw,SC-04F,kltedcm
+TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,kltexx,SC-04F,kltedcm
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/kltedcm/mkbootimg.mk
