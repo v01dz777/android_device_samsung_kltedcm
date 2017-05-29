@@ -35,5 +35,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/kltedcm/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     device/samsung/kltedcm/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
+# Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
