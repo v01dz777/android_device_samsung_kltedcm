@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,18 +26,12 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcm/kltedcm-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
-
 DEVICE_NFC_SONY=yes
 
 # Ramdisk for FeliCa
-
 PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.felica.sh
-
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
