@@ -33,6 +33,14 @@ PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.felica.sh
 
+# NFC
+# See https://github.com/LineageOS/android_system_nfc/blob/lineage-15.0/halimpl/pn54x/Android.mk#L15
+# for magic values of NXP_CHIP_TYPE.
+NXP_CHIP_TYPE := 1
+PRODUCT_PACKAGES += \
+    libpn547_fw \
+    nfc_nci.msm8974
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
