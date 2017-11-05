@@ -28,6 +28,7 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/kltedcm/init/init_klte.cpp
 
 # NFC
 BOARD_NFC_CHIPSET := sony
+BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
