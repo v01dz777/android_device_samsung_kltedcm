@@ -148,14 +148,16 @@ void init_target_properties()
         property_override("ro.product.device", "kltetfnvzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("TracFone", "310000", "10", "vzw");
-    } else {
+    } else if (bootloader.find("G900D") == 0) {
         /* kltedcm */
 	property_override("ro.build.fingerprint", "samsung/SC-04F/SC-04F:5.0/LRX21T/SC04FOMU1WOI2:user/release-keys");
     	property_override("ro.build.description", "kltedcm-user 5.0 LRX21T SC04FOMU1WOI2 release-keys");
-    	property_override("ro.product.model", "SC-04F");
+    	property_override("ro.product.model", "SM-G900D");
     	property_override("ro.product.device", "kltedcm");
     	property_set("ro.product.name", "SC-04F");
     	property_set("ro.ril.enable.dcm.feature", "1");
+        gsm_properties("gsm");
+    } else {
         gsm_properties("gsm");
     }
 
