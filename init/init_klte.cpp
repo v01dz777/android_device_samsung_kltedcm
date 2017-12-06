@@ -81,6 +81,16 @@ void init_target_properties()
     if (platform != ANDROID_TARGET)
         return;
 
+
+    property_override("ro.build.fingerprint", "samsung/SC-04F/SC-04F:5.0/LRX21T/SC04FOMU1WOI2:user/release-keys");
+    property_override("ro.build.description", "kltedcm-user 5.0 LRX21T SC04FOMU1WOI2 release-keys");
+    property_override("ro.product.model", "SC-04F");
+    property_override("ro.product.device", "kltedcm");
+    property_override("ro.product.name", "SC-04F");
+    property_override("ro.ril.enable.dcm.feature", "1")
+	gsm_properties("");
+
+#if 0
     std::string bootloader = GetProperty("ro.bootloader", "");
 
     if (bootloader.find("G900AZ") == 0) {
@@ -155,4 +165,5 @@ void init_target_properties()
     std::string device = GetProperty("ro.product.device", "");
     LOG(INFO) << "Found bootloader id " << bootloader <<  " setting build properties for "
 	    << device <<  " device" << std::endl;
+#endif
 }
