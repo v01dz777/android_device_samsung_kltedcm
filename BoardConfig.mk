@@ -19,7 +19,12 @@
 TARGET_OTA_ASSERT_DEVICE := SC-04F,kltedcm,klte
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage_klte_dcm_defconfig
+#TARGET_KERNEL_CONFIG := lineage_klte_dcm_defconfig
+TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
+TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/klte
+TARGET_KERNEL_HAVE_EXFAT := true
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974

@@ -18,7 +18,7 @@
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-$(call inherit-product, device/samsung/klte/full_klte.mk)
+$(call inherit-product, device/samsung/kltedcm/full_kltedcm.mk)
 
 PRODUCT_DEVICE := kltedcm
 PRODUCT_NAME := lineage_kltedcm
