@@ -87,7 +87,7 @@ void init_target_properties()
     property_override("ro.product.model", "SC-04F");
     property_override("ro.product.device", "kltedcm");
     property_override("ro.product.name", "SC-04F");
-    property_override("ro.ril.enable.dcm.feature", "1")
+    property_override("ro.ril.enable.dcm.feature", "1");
 	gsm_properties("");
 
 #if 0
