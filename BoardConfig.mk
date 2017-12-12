@@ -16,13 +16,13 @@
 # inherit from common klte
 -include device/samsung/klte-common/BoardConfigCommon.mk
 
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 TARGET_OTA_ASSERT_DEVICE := SC-04F,kltedcm,klte
 
 # Kernel
-#TARGET_KERNEL_CONFIG := lineage_klte_dcm_defconfig
-TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
+TARGET_KERNEL_CONFIG := lineage_kltedcm_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/klte
 TARGET_KERNEL_HAVE_EXFAT := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
