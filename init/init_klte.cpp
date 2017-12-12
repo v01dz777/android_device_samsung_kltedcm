@@ -77,10 +77,9 @@ void gsm_properties(char const *rild_lib_variant)
 
 void init_target_properties()
 {
-    std::string platform = GetProperty("ro.board.platform", "");
-    if (platform != ANDROID_TARGET)
-        return;
-
+    //std::string platform = GetProperty("ro.board.platform", "");
+    //if (platform != ANDROID_TARGET)
+    //    return;
 
     property_override("ro.build.fingerprint", "samsung/SC-04F/SC-04F:5.0/LRX21T/SC04FOMU1WOI2:user/release-keys");
     property_override("ro.build.description", "kltedcm-user 5.0 LRX21T SC04FOMU1WOI2 release-keys");
@@ -88,7 +87,7 @@ void init_target_properties()
     property_override("ro.product.device", "kltedcm");
     property_override("ro.product.name", "SC-04F");
     property_override("ro.ril.enable.dcm.feature", "1");
-	gsm_properties("");
+	gsm_properties("gsm");
 
 #if 0
     std::string bootloader = GetProperty("ro.bootloader", "");
