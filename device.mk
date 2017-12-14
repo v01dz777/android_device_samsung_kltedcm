@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # AOJP common
-#$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
