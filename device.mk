@@ -39,5 +39,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
+#Smart card service for felica
+#TARGET_ENABLE_SMARTCARD_SERVICE := true
+PRODUCT_PACKAGES += \
+    org.simalliance.openmobileapi.xml org.simalliance.openmobileapi
+
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
