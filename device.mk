@@ -27,7 +27,7 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcm/kltedcm-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-DEVICE_NFC_SONY=yes
+DEVICE_NFC_SONY := yes
 
 # Ramdisk for FeliCa
 PRODUCT_PACKAGES += \
