@@ -22,9 +22,6 @@ TARGET_OTA_ASSERT_DEVICE := SC-04F,kltedcm,klte
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltedcm_defconfig
-TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
-TARGET_KERNEL_HAVE_EXFAT := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
@@ -32,6 +29,7 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/kltedcm/init/init_klte.cpp
 
 # NFC
 BOARD_NFC_CHIPSET := sony
+BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
