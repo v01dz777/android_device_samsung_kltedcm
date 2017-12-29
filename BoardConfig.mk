@@ -14,13 +14,16 @@
 # limitations under the License.
 
 # inherit from common klte
--include device/samsung/klte-common/BoardConfigCommon.mk
+include device/samsung/klte-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := kltekdi,SC-04F,kltedcm,klte
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/kltedcm/mkbootimg.mk
 TARGET_KERNEL_CONFIG := lineage_klte_dcm_defconfig
+
+# Fingerprint
+include $(COMMON_PATH)/fingerprint/board.mk
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974

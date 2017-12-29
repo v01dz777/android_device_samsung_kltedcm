@@ -33,6 +33,9 @@ PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.felica.sh
 
+# Fingerprint
+$(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
+
 # NFC
 # See https://github.com/LineageOS/android_system_nfc/blob/lineage-15.0/halimpl/pn54x/Android.mk#L15
 # for magic values of NXP_CHIP_TYPE.
