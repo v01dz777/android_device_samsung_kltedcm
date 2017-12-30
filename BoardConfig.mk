@@ -34,6 +34,9 @@ BOARD_NFC_CHIPSET := sony
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := msm8974
 
+# Radio/RIL
+include $(COMMON_PATH)/radio/single/board.mk
+
 # inherit from the proprietary version
 -include vendor/samsung/kltedcm/BoardConfigVendor.mk
 -include vendor/samsung/klte/BoardConfigVendor.mk
