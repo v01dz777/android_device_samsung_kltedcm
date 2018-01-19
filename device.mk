@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,17 +27,19 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcm/kltedcm-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-DEVICE_NFC_SONY := yes
 
+# Fingerprint
+$(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
+
+
+# NFC
+$(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
+
+#DEVICE_NFC_SONY := yes
 # Ramdisk for FeliCa
-PRODUCT_PACKAGES += \
-    init.carrier.rc \
-    init.felica.sh
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/vendor/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/vendor/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/vendor/etc/nfcee_access.xml
+#PRODUCT_PACKAGES += \
+#    init.carrier.rc \
+#    init.felica.sh
 
 #Smart card service for felica
 #TARGET_ENABLE_SMARTCARD_SERVICE := true
