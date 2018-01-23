@@ -16,8 +16,6 @@
 # inherit from common klte
 include device/samsung/klte-common/BoardConfigCommon.mk
 
-#PRODUCT_RESTRICT_VENDOR_FILES := false
-
 TARGET_OTA_ASSERT_DEVICE := SC-04F,kltedcm,klte
 
 # Kernel
