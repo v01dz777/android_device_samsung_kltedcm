@@ -35,6 +35,9 @@ include $(COMMON_PATH)/nfc/pn547/board.mk
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # inherit from the proprietary version
 -include vendor/samsung/kltedcm/BoardConfigVendor.mk
 -include vendor/samsung/klte/BoardConfigVendor.mk
