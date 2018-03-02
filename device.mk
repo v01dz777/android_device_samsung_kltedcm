@@ -40,9 +40,9 @@ $(call inherit-product, device/samsung/klte-common/nfc/sony/product.mk)
 #    init.felica.sh
 
 #Smart card service for felica
-#TARGET_ENABLE_SMARTCARD_SERVICE := true
-#PRODUCT_PACKAGES += \
-#    org.simalliance.openmobileapi.xml org.simalliance.openmobileapi
+TARGET_ENABLE_SMARTCARD_SERVICE := true
+PRODUCT_PACKAGES += \
+    org.simalliance.openmobileapi.xml org.simalliance.openmobileapi
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
