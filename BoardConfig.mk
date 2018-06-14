@@ -44,6 +44,12 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/libsec-ril.gsm.so|libshim_cutils_atomic.so \
+    /system/vendor/lib/libsec-ril.usc.so|libshim_cutils_atomic.so \
+    /system/vendor/lib/libsec-ril.vzw.so|libshim_cutils_atomic.so
+
 # inherit from the proprietary version
 -include vendor/samsung/kltedcm/BoardConfigVendor.mk
 -include vendor/samsung/klte/BoardConfigVendor.mk
