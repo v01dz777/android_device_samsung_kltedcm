@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_kltedcm.mk
+    $(LOCAL_DIR)/du_kltedcm.mk
